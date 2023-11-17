@@ -1,5 +1,4 @@
-import { clickTextBtn } from './util/click'
-// import 'core-js/es/promise'
+import { clickTextBtn } from '../utils/click'
 // @ts-ignore
 auto.waitFor() // 文档地址：https://docs.hamibot.com/reference/widgetsBasedAutomation
 // @ts-ignore
@@ -12,14 +11,7 @@ console.show()
 // @ts-ignore
 setScreenMetrics(1080, 2280)
 
-// const p = new Promise(resolve => {
-// 	setTimeout(() => {
-// 		resolve(1)
-// 	}, 3000)
-// })
-
-// p.then()
 // 点击工作台
 clickTextBtn('工作台')
 clickTextBtn('假勤')
-clickTextBtn('下班打卡')
+clickTextBtn('上班打卡')

@@ -1,13 +1,15 @@
 const path = require('path')
+const glob = require('glob')
 
 module.exports = {
-	entry: {
-		index: './src/feishu.ts',
-	},
+	entry: glob.sync('./src/!(*utils)/*.ts').reduce((entries, file) => {
+		const entryName = path.basename(file, '.ts')
+		entries[entryName] = file
+		return entries
+	}, {}),
 	output: {
-		filename: '[name].[hash].js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
-		//  publicPath:'/' //这个路径会用于出口的html文件引入关联文件的路径
 	},
 	mode: 'production',
 	module: {

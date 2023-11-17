@@ -1,0 +1,1 @@
+(()=>{"use strict";function c(c){for(var o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;!click(c,o););}auto.waitFor(),launchApp("飞书"),console.show(),setScreenMetrics(1080,2280),c("工作台"),c("假勤"),c("上班打卡")})();
