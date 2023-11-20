@@ -5,6 +5,5 @@
  * @param {*} count 点击第几个出现文本的按钮 默认1
  */
 export function clickTextBtn(text: string, count: number = 0) {
-	// @ts-ignore
 	while (!click(text, count));
 }
