@@ -2,7 +2,7 @@
 // rule:
 // 1: 格式: 2021/09/18
 // 2: 格式: 2021-09-18
-function getDateTime(rule: number) {
+export function getDateTime(rule: number) {
 	let date = new Date()
 	let year = date.getFullYear()
 	let month = String(date.getMonth() + 1)
