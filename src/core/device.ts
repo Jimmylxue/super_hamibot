@@ -5,6 +5,7 @@
  * 解锁手机屏幕
  */
 export function unlockScreen() {
+	device.wakeUp()
 	// 唤醒屏幕
 	device.wakeUpIfNeeded()
 }
