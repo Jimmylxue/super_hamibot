@@ -1,5 +1,6 @@
 import { unlockScreen } from '../core/device'
 import { clickText, clickTextBtn } from '../core/click'
+import { sendNotify } from '../core/platform'
 
 unlockScreen()
 
@@ -18,3 +19,8 @@ clickTextBtn('工作台')
 clickTextBtn('假勤')
 
 clickText('更新打卡')
+
+sleep(1000)
+home()
+sendNotify('操作成功')
+exit()
