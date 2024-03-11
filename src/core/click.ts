@@ -25,3 +25,18 @@ export function clickText(textString: string) {
 	}
 	click(uix.left + 10, uix.top + 10)
 }
+
+export function pressText(textString: string) {
+	let uix: Rect | undefined = undefined
+	while (!uix) {
+		const ui = className('android.widget.TextView')
+			.text(textString)
+			.findOne()
+			.bounds()
+
+		if (ui) {
+			uix = ui
+		}
+	}
+	press(uix.left + 10, uix.top + 10, 300)
+}

@@ -1,5 +1,5 @@
 import { unlockScreen } from '../core/device'
-import { clickText, clickTextBtn } from '../core/click'
+import { clickText, clickTextBtn, pressText } from '../core/click'
 import { sendNotify } from '../core/platform'
 
 unlockScreen()
@@ -16,11 +16,21 @@ setScreenMetrics(1080, 2280)
 
 // 点击工作台
 clickTextBtn('工作台')
+sleep(3000)
+
 clickTextBtn('假勤')
+sleep(3000)
 
 clickText('更新打卡')
 
-sleep(1000)
+/**
+ * 这里是就需要双击 否则点击失败
+ */
+pressText('确定')
+pressText('确定')
+
+sleep(2000)
+
 home()
 sendNotify('操作成功')
 exit()
