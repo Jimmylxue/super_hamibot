@@ -14,7 +14,7 @@ toastLog(`脚本开始执行，随机睡眠${randomNumber}分钟`)
 sleep(1000 * 60 * randomNumber)
 
 // @ts-ignore
-console.show()
+// console.show()
 
 launchApp('飞书')
 
