@@ -1,6 +1,5 @@
 import { unlockScreen } from '../core/device'
 import { clickText, clickTextBtn, pressText } from '../core/click'
-import { sendNotify } from '../core/platform'
 
 unlockScreen()
 
@@ -14,12 +13,13 @@ launchApp('飞书')
 // 设置屏幕兼容性尺寸
 setScreenMetrics(1080, 2280)
 
-// 点击工作台
 clickTextBtn('工作台')
-sleep(15000)
 
-clickTextBtn('假勤')
+pressText('我的常用')
+
 sleep(3000)
+
+click(187, 1760)
 
 clickText('更新打卡')
 
@@ -34,5 +34,4 @@ pressText('确定')
 sleep(10000)
 
 home()
-sendNotify('操作成功')
 exit()

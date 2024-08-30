@@ -3,7 +3,7 @@ const glob = require('glob')
 
 module.exports = {
 	entry: glob
-		.sync('./src/!(*utils|*core*|types)/*.ts')
+		.sync(path.resolve(__dirname, './src/!(*utils|*core*|types)/*.ts'))
 		.reduce((entries, file) => {
 			const entryName = path.basename(file, '.ts')
 			entries[entryName] = file
