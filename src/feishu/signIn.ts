@@ -20,9 +20,12 @@ launchApp('飞书')
 
 // 设置屏幕兼容性尺寸
 setScreenMetrics(1080, 2280)
+// 防止出现首屏广告
+sleep(10000)
 
 // 点击工作台
 clickTextBtn('工作台')
+sleep(3000)
 
 pressText('我的常用')
 sleep(3000)

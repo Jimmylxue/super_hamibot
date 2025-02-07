@@ -1,0 +1,1 @@
+(()=>{"use strict";device.wakeUp(),device.wakeUpIfNeeded(),sleep(1e3),home(),sleep(2e3),launchApp("企业微信")})();
